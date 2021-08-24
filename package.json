@@ -1,0 +1,28 @@
+{
+  "name": "hrdev",
+  "version": "1.0.0",
+  "description": "HR recruitment and management",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "keywords": [],
+  "author": "nhac lly",
+  "license": "ISC",
+  "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
+    "next": "^11.1.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.19",
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.1.0",
+    "typescript": "^4.3.5"
+  }
+}
