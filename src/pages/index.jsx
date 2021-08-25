@@ -118,7 +118,19 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const IndexPage: NextPage = () => {
+export async function getStaticProps() {
+  const request = await fetch("http://localhost:3000/api/getdata");
+  const json = await request.json();
+
+  return {
+    props: {
+      data: json,
+    },
+  };
+}
+
+const IndexPage = (props) => {
+  const { data } = props;
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const handleDrawerOpen = () => {
@@ -178,15 +190,15 @@ const IndexPage: NextPage = () => {
         </div>
         <Divider />
         <List>
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
+          {data.map((d) => (
+            <div>{Object.keys(d)}</div>
+          ))}
         </List>
         <Divider />
         <List>
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
+          {data.map((d) => (
+            <div>{Object.values(d)}</div>
+          ))}
         </List>
       </Drawer>
       <main className={classes.content}>
