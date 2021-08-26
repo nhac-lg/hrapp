@@ -39,7 +39,7 @@ const Layout = ({ children }) => {
   const handleDrawerClose = () => {
     setOpen(false);
   };
-//   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
+  //   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
   return (
     <div className={classes.root}>
@@ -100,14 +100,6 @@ const Layout = ({ children }) => {
                 <ListItemText primary="Recruitment" />
               </ListItem>
             </Link>
-            <Link href="/settings" passHref>
-              <ListItem button to="/setting">
-                <ListItemIcon>
-                  <SettingsIcon />
-                </ListItemIcon>
-                <ListItemText primary="Setting" />
-              </ListItem>
-            </Link>
           </div>{" "}
         </List>
         <Divider />
@@ -121,6 +113,11 @@ const Layout = ({ children }) => {
                 <ListItemText primary="Management" />
               </ListItem>
             </Link>
+          </div>{" "}
+        </List>
+        <Divider />
+        <List>
+          <div>
             <Link href="/settings" passHref>
               <ListItem button>
                 <ListItemIcon>
@@ -151,16 +148,16 @@ const Layout = ({ children }) => {
 };
 
 function Copyright() {
-    return (
-      <Typography variant="body2" color="textSecondary" align="center">
-        {"Copyright © "}
-        <Link color="inherit" href="https://material-ui.com/">
-          Your Website
-        </Link>{" "}
-        {new Date().getFullYear()}
-        {"."}
-      </Typography>
-    );
-  }
+  return (
+    <Typography variant="body2" color="textSecondary" align="center">
+      {"Copyright © "}
+      <Link color="inherit" href="https://material-ui.com/">
+        Your Website
+      </Link>{" "}
+      {new Date().getFullYear()}
+      {"."}
+    </Typography>
+  );
+}
 
 export default Layout;
