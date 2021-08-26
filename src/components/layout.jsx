@@ -39,7 +39,7 @@ const Layout = ({ children }) => {
   const handleDrawerClose = () => {
     setOpen(false);
   };
-  const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
+//   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
   return (
     <div className={classes.root}>
@@ -100,7 +100,7 @@ const Layout = ({ children }) => {
                 <ListItemText primary="Recruitment" />
               </ListItem>
             </Link>
-            <Link href="/setting" passHref>
+            <Link href="/settings" passHref>
               <ListItem button to="/setting">
                 <ListItemIcon>
                   <SettingsIcon />
@@ -121,7 +121,7 @@ const Layout = ({ children }) => {
                 <ListItemText primary="Management" />
               </ListItem>
             </Link>
-            <Link href="/setting" passHref>
+            <Link href="/settings" passHref>
               <ListItem button>
                 <ListItemIcon>
                   <SettingsIcon />
@@ -138,7 +138,7 @@ const Layout = ({ children }) => {
           <Grid container spacing={3}>
             {/* App 1 */}
             <Grid item xs={12} md={12} lg={12}>
-              <Paper className={fixedHeightPaper}>{children}</Paper>
+              <Paper className={classes.paper}>{children}</Paper>
             </Grid>
           </Grid>
           <Box pt={4}>
