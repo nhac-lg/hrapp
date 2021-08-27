@@ -35,17 +35,15 @@ export async function getStaticProps() {
 export default function BasicTable({ data }) {
   const classes = useStyles();
   const rows = data;
-  console.log(rows);
-
   return (
-    <div>
+    <Box>
       <Box display="flex" justifyContent="space-between" m={1} p={1}>
-      <Typography variant="h5" component="h5" gutterBottom>
-        User Settings
-      </Typography>
-      <Button variant="contained" color="primary">
-        New User
-      </Button>
+        <Typography variant="h5" component="h5" gutterBottom>
+          User Settings
+        </Typography>
+        <Button variant="contained" color="primary">
+          New User
+        </Button>
       </Box>
       <TableContainer component={Paper}>
         <Table className={classes.table} aria-label="simple table">
@@ -89,6 +87,6 @@ export default function BasicTable({ data }) {
           </TableBody>
         </Table>
       </TableContainer>
-    </div>
+    </Box>
   );
 }

@@ -6,8 +6,14 @@ const useStyles = makeStyles((theme) => ({
     root: {
       display: "flex",
     },
+    recruitTable: {
+      flexGrow: 1,
+    },
     toolbar: {
       paddingRight: 24, // keep right padding when drawer closed
+    },
+    alignSelf: {
+      alignSelf: "center",
     },
     toolbarIcon: {
       display: "flex",

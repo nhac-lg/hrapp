@@ -1,8 +1,6 @@
 import * as React from "react";
-import { NextPage } from "next";
 import {
   Box,
-  Button,
   Container,
   Grid,
   Typography,
@@ -14,12 +12,10 @@ import {
   Divider,
   IconButton,
   Badge,
-  Paper,
   Link,
   ListItem,
   ListItemIcon,
   ListItemText,
-  ListSubheader,
 } from "@material-ui/core";
 import clsx from "clsx";
 import MenuIcon from "@material-ui/icons/Menu";
@@ -39,7 +35,6 @@ const Layout = ({ children }) => {
   const handleDrawerClose = () => {
     setOpen(false);
   };
-  //   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
   return (
     <div className={classes.root}>
@@ -133,9 +128,8 @@ const Layout = ({ children }) => {
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
           <Grid container spacing={3}>
-            {/* App 1 */}
             <Grid item xs={12} md={12} lg={12}>
-              <Paper className={classes.paper}>{children}</Paper>
+              {children}
             </Grid>
           </Grid>
           <Box pt={4}>

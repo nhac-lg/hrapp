@@ -50,7 +50,9 @@ const testData = [
     language: "Vietnamese, English",
   },
 ];
-
-export default function getData() {
+function getCandidate() {
   return testData;
+}
+export default function handler(req, res) {
+  res.status(200).json(getCandidate());
 }

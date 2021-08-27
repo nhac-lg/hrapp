@@ -1,5 +1,5 @@
-import getData from '../../../selenium'
+import getData from "../../../selenium";
 
 export default function handler(req, res) {
-    res.status(200).json(getData());
+  res.status(200).json(getData());
 }
