@@ -148,9 +148,9 @@ export default function Recruitment() {
                   <MenuItem value="">
                     <em>Please Select</em>
                   </MenuItem>
-                  <MenuItem value={1}>Location 1</MenuItem>
-                  <MenuItem value={2}>Location 2</MenuItem>
-                  <MenuItem value={3}>Location 3</MenuItem>
+                  <MenuItem value={1}>HCMC</MenuItem>
+                  <MenuItem value={2}>Đà Nẵng</MenuItem>
+                  <MenuItem value={3}>Huế</MenuItem>
                 </Select>
                 <FormHelperText>Choose Home Address</FormHelperText>
               </FormControl>{" "}

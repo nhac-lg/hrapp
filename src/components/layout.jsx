@@ -87,7 +87,7 @@ const Layout = ({ children }) => {
         <Divider />
         <List>
           <div>
-            <Link href="/recruitment" passhref>
+            <Link color="inherit" href="/recruitment" passhref>
               <ListItem button>
                 <ListItemIcon>
                   <FaceIcon />
@@ -100,7 +100,7 @@ const Layout = ({ children }) => {
         <Divider />
         <List>
           <div>
-            <Link href="/management" passhref>
+            <Link color="inherit" href="/management" passhref>
               <ListItem button>
                 <ListItemIcon>
                   <SupervisedUserCircleIcon />
@@ -113,7 +113,7 @@ const Layout = ({ children }) => {
         <Divider />
         <List>
           <div>
-            <Link href="/settings" passhref>
+            <Link color="inherit" href="/settings" passhref>
               <ListItem button>
                 <ListItemIcon>
                   <SettingsIcon />

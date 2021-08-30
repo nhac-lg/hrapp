@@ -7,7 +7,7 @@ const testData = [
     position: "Junior Tester",
     status: "Denied",
     interviewDate: "2021-08-30",
-    note: "To be verified",
+    note: "Match 10%",
     attachFile: "123.doc",
   },
   {
@@ -18,7 +18,7 @@ const testData = [
     position: "Junior Tester",
     status: "In Progress",
     interviewDate: "2021-08-30",
-    note: "To be verified",
+    note: "Match 40%",
     attachFile: "123.doc",
   },
   {
@@ -29,7 +29,7 @@ const testData = [
     position: "Junior Tester",
     status: "Accepted",
     interviewDate: "2021-08-30",
-    note: "To be verified",
+    note: "Match 90%",
     attachFile: "123.doc",
   },
   {
@@ -40,7 +40,7 @@ const testData = [
     position: "Junior Tester",
     status: "In Touch",
     interviewDate: "2021-08-30",
-    note: "To be verified",
+    note: "Match 90%",
     attachFile: "123.doc",
   },
   {
@@ -51,7 +51,7 @@ const testData = [
     position: "Junior Tester",
     status: "Job Closed",
     interviewDate: "2021-08-30",
-    note: "To be verified",
+    note: "Match 44%",
     attachFile: "123.doc",
   },
 ];
