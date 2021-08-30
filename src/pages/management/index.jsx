@@ -10,6 +10,9 @@ import {
   TableContainer,
   TableHead,
   TableRow,
+  Select,
+  MenuItem,
+  Link,
 } from "@material-ui/core";
 import useStyles from "../../components/styles";
 
@@ -27,6 +30,11 @@ export async function getStaticProps() {
 export default function ReactVirtualizedTable({ data }) {
   const rows = data;
   const classes = useStyles();
+  const [age, setAge] = React.useState("");
+  const handleChange = (event) => {
+    setAge(event.target.value);
+  };
+
   return (
     <Box>
       <Box m={1} p={1}>
@@ -41,11 +49,12 @@ export default function ReactVirtualizedTable({ data }) {
               <TableRow>
                 <TableCell>ID</TableCell>
                 <TableCell align="center">Name</TableCell>
-                <TableCell align="center">Job</TableCell>
-                <TableCell align="center">Expected Salary</TableCell>
-                <TableCell align="center">Expected Job Level</TableCell>
-                <TableCell align="center">Year Of Experience</TableCell>
-                <TableCell align="center">Language</TableCell>
+                <TableCell align="center">Phone</TableCell>
+                <TableCell align="center">Email</TableCell>
+                <TableCell align="center">Position</TableCell>
+                <TableCell align="center">Status</TableCell>
+                <TableCell align="center">Interview Date</TableCell>
+                <TableCell align="center">Note</TableCell>
                 <TableCell align="center">Action</TableCell>
               </TableRow>
             </TableHead>
@@ -55,12 +64,32 @@ export default function ReactVirtualizedTable({ data }) {
                   <TableCell component="th" scope="row">
                     {row.id}
                   </TableCell>
-                  <TableCell align="center">{row.name}</TableCell>
-                  <TableCell align="center">{row.job}</TableCell>
-                  <TableCell align="center">{row.expectedSalary}</TableCell>
-                  <TableCell align="center">{row.expectedJobLevel}</TableCell>
-                  <TableCell align="center">{row.yearOfExperience}</TableCell>
-                  <TableCell align="center">{row.language}</TableCell>
+                  <TableCell align="center">
+                    <Link href="/test.pdf" target="_blank">
+                      {row.name}
+                    </Link>
+                  </TableCell>
+                  <TableCell align="center">{row.phone}</TableCell>
+                  <TableCell align="center">{row.email}</TableCell>
+                  <TableCell align="center">{row.position}</TableCell>
+                  <TableCell align="center">
+                    {" "}
+                    <Select
+                      labelId="demo-simple-select-helper-label"
+                      id="demo-simple-select-helper"
+                      defaultValue={row.status}
+                    >
+                      <MenuItem value="Pass">Pass</MenuItem>
+                      <MenuItem value="Failed">Fail</MenuItem>
+                      <MenuItem value="In Touch">In Touch</MenuItem>
+                      <MenuItem value="In Progress">In Progress</MenuItem>
+                      <MenuItem value="Job Closed">Job Closed</MenuItem>
+                      <MenuItem value="Denied">Denied</MenuItem>
+                      <MenuItem value="Accepted">Accepted</MenuItem>
+                    </Select>
+                  </TableCell>
+                  <TableCell align="center">{row.interviewDate}</TableCell>
+                  <TableCell align="center">{row.note}</TableCell>
                   <TableCell align="center">
                     <Button variant="contained" color="primary">
                       Remove Candidate{" "}
