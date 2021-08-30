@@ -1,4 +1,4 @@
-### To Start:
+### To Install:
     yarn install or npm i
 
 ### To Start:
